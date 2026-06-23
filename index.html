@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaloRed & HaloUNO Production Statuses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>HaloRed & HaloUNO Production Statuses</h1>
+    </header>
+
+    <div class="table-header">
+        <div>Date Requested</div>
+        <div>Order ID</div>
+        <div>SKU</div>
+        <div>QTY</div>
+        <div>Status</div>
+        <div></div>
+    </div>
+
+    <div id="productionTable">
+
+        <div class="row-wrap">
+            <div class="row-cells production-row">
+                <div>6/23</div>
+                <div>Sally Smith</div>
+                <div>HaloRed 1 person O2</div>
+                <div>01</div>
+                <div>
+                    <span class="status production">PRODUCTION</span>
+                </div>
+            </div>
+
+            <div class="details-link">
+                <a href="#" onclick="openModal()">See Details &gt;</a>
+            </div>
+        </div>
+
+        <div class="row-wrap">
+            <div class="row-cells inventory-row">
+                <div>6/14</div>
+                <div>UNASSIGNED - For Inventory</div>
+                <div>HaloRed 1 person O2</div>
+                <div>02</div>
+                <div>
+                    <span class="status ready">READY</span>
+                </div>
+            </div>
+
+            <div class="details-link">
+                <a href="#" onclick="openModal()">See Details &gt;</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="detailsModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-btn" onclick="closeModal()">×</button>
+
+        <div class="top-section">
+
+            <div class="order-details">
+                <h2>ORDER DETAILS</h2>
+                <p><strong>Sally Smith</strong></p>
+                <p>HaloRed 1 person O2</p>
+                <p>QTY 01</p>
+            </div>
+
+            <div class="ship-to">
+                <h2>SHIP TO</h2>
+                <p>TBD</p>
+            </div>
+
+            <div class="status-section">
+                <h2>STATUS</h2>
+                <span class="status production large">PRODUCTION</span>
+            </div>
+
+        </div>
+
+        <div class="specs-header">
+            SPECS & ACCESSORIES
+        </div>
+
+        <div class="specs-container">
+
+            <div class="specs-left">
+
+                <div class="spec-row">
+                    <strong>Redlight Configuration:</strong>
+                    <span>1 Small (Standard), 3 Large (Max)</span>
+                </div>
+
+                <div class="spec-row">
+                    <strong>Seat Type:</strong>
+                    <span>Chair</span>
+                </div>
+
+                <div class="spec-row">
+                    <strong>Plug Type:</strong>
+                    <span>UK</span>
+                </div>
+
+                <div class="spec-row">
+                    <strong>Oxygen Y/N:</strong>
+                    <span>Yes</span>
+                </div>
+
+            </div>
+
+            <div class="notes-box">
+                <h3>OTHER IMPORTANT NOTES</h3>
+                <p>None</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f7;
+    color: #111;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding-bottom: 30px;
+}
+
+header {
+    background: #730000;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.table-header,
+.row {
+    display: grid;
+    grid-template-columns: 130px 280px 280px 90px 180px 150px;
+    gap: 8px;
+    align-items: center;
+    padding: 0 18px;
+}
+
+.table-header {
+    margin-top: 22px;
+    margin-bottom: 16px;
+}
+
+.table-header div {
+    background: #730000;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 800;
+    padding: 12px 10px;
+    border-radius: 35px;
+    font-size: 18px;
+}
+
+.table-header div:last-child {
+    background: transparent;
+}
+
+.row {
+    min-height: 52px;
+    margin: 0 18px 16px 18px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.production-row {
+    background: #ead0d0;
+}
+
+.inventory-row {
+    background: #d8e4f3;
+}
+
+.row div {
+    text-align: center;
+}
+
+.row div:nth-child(2),
+.row div:nth-child(3) {
+    text-align: center;
+}
+
+.row a {
+    color: #777777;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.row a:hover {
+    color: #730000;
+}
+
+.status {
+    display: inline-block;
+    min-width: 145px;
+    padding: 8px 18px;
+    border-radius: 35px;
+    text-align: center;
+    font-weight: 900;
+    color: #000000;
+}
+
+.status.production {
+    background: #ead0d0;
+}
+
+.status.ready {
+    background: #cbdced;
+}
+
+.status.large {
+    background: #730000;
+    color: #ffffff;
+    min-width: 220px;
+    padding: 20px 28px;
+    font-size: 24px;
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px;
+}
+
+.modal.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 90vw;
+    height: 86vh;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 48px 52px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    border: none;
+    background: transparent;
+    color: #730000;
+    font-size: 34px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.top-section {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 22px;
+    margin-bottom: 46px;
+}
+
+.top-section h2 {
+    color: #730000;
+    font-size: 26px;
+    margin: 0 0 18px 0;
+}
+
+.top-section p {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.status-section {
+    text-align: center;
+}
+
+.specs-header {
+    background: #730000;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 35px;
+    margin-bottom: 28px;
+}
+
+.specs-container {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 36px;
+}
+
+.specs-left {
+    font-size: 20px;
+}
+
+.spec-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    border-bottom: 1px solid #dddddd;
+    padding: 18px 0;
+}
+
+.spec-row strong {
+    text-align: left;
+}
+
+.spec-row span {
+    text-align: left;
+}
+
+.notes-box {
+    border: 1px solid #999999;
+    min-height: 230px;
+    padding: 22px;
+}
+
+.notes-box h3 {
+    color: #730000;
+    margin: 0 0 20px 0;
+    font-size: 22px;
+}
+
+.notes-box p {
+    font-size: 20px;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .table-header,
+    .row {
+        grid-template-columns: 90px 1fr 1fr 70px 130px 120px;
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    .table-header div {
+        font-size: 13px;
+        padding: 10px 6px;
+    }
+
+    .row {
+        margin: 0 8px 10px 8px;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        width: 96vw;
+        height: 92vh;
+        padding: 36px 22px;
+    }
+
+    .top-section,
+    .specs-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .spec-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
