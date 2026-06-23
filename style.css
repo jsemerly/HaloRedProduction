@@ -6,36 +6,41 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f3f4f7;
+    background: #f4f5f8;
     color: #111;
 }
 
 .container {
-    width: 100%;
-    margin: 0;
+    width: min(1180px, calc(100% - 48px));
+    margin: 32px auto;
     background: #ffffff;
-    padding-bottom: 40px;
+    padding-bottom: 32px;
 }
 
 header {
     background: #760000;
     color: #ffffff;
     text-align: center;
-    padding: 28px 20px;
+    padding: 22px 16px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 44px;
+    font-size: 34px;
     font-weight: 900;
 }
 
-.table-header {
+.table-header,
+.row-wrap {
     display: grid;
-    grid-template-columns: 170px 380px 380px 120px 250px 180px;
-    gap: 10px;
+    grid-template-columns: 130px 260px 300px 80px 180px 130px;
+    column-gap: 12px;
     align-items: center;
-    padding: 28px 24px 18px 24px;
+    padding: 0 22px;
+}
+
+.table-header {
+    margin: 28px 0 14px;
 }
 
 .table-header div {
@@ -43,9 +48,9 @@ header h1 {
     color: #ffffff;
     text-align: center;
     font-weight: 900;
-    padding: 18px 10px;
-    border-radius: 35px;
-    font-size: 24px;
+    padding: 12px 10px;
+    border-radius: 32px;
+    font-size: 18px;
 }
 
 .table-header div:last-child {
@@ -53,24 +58,23 @@ header h1 {
 }
 
 .row-wrap {
-    display: grid;
-    grid-template-columns: 1fr 180px;
-    align-items: center;
-    margin: 0 24px 16px 24px;
+    min-height: 58px;
+    margin-bottom: 12px;
 }
 
 .row-cells {
+    grid-column: 1 / 6;
     display: grid;
-    grid-template-columns: 170px 380px 380px 120px 250px;
+    grid-template-columns: 130px 260px 300px 80px 180px;
     align-items: center;
-    min-height: 74px;
-    font-size: 22px;
+    min-height: 58px;
+    font-size: 17px;
     font-weight: 700;
 }
 
 .row-cells div {
     text-align: center;
-    padding: 10px;
+    padding: 8px 10px;
 }
 
 .production-row {
@@ -82,8 +86,9 @@ header h1 {
 }
 
 .details-link {
-    text-align: center;
-    font-size: 22px;
+    grid-column: 6 / 7;
+    text-align: left;
+    font-size: 17px;
     font-weight: 800;
 }
 
@@ -98,9 +103,9 @@ header h1 {
 
 .status {
     display: inline-block;
-    min-width: 150px;
-    padding: 10px 22px;
-    border-radius: 35px;
+    min-width: 120px;
+    padding: 7px 14px;
+    border-radius: 28px;
     text-align: center;
     font-weight: 900;
     color: #000000;
@@ -117,9 +122,9 @@ header h1 {
 .status.large {
     background: #760000;
     color: #ffffff;
-    min-width: 240px;
-    padding: 22px 30px;
-    font-size: 26px;
+    min-width: 190px;
+    padding: 16px 24px;
+    font-size: 20px;
 }
 
 /* Modal */
@@ -130,7 +135,7 @@ header h1 {
     z-index: 1000;
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
-    padding: 38px;
+    padding: 36px;
 }
 
 .modal.open {
@@ -141,43 +146,43 @@ header h1 {
 
 .modal-content {
     position: relative;
-    width: 90vw;
-    height: 86vh;
+    width: min(1050px, 92vw);
+    height: 84vh;
     background: #ffffff;
     border-radius: 8px;
-    padding: 56px 58px;
+    padding: 48px 52px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
     overflow-y: auto;
 }
 
 .close-btn {
     position: absolute;
-    top: 24px;
-    right: 32px;
+    top: 18px;
+    right: 24px;
     border: none;
     background: transparent;
     color: #760000;
-    font-size: 40px;
+    font-size: 34px;
     cursor: pointer;
 }
 
 .top-section {
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr;
-    gap: 70px;
-    margin-top: 28px;
-    margin-bottom: 48px;
+    gap: 56px;
+    margin-top: 24px;
+    margin-bottom: 38px;
 }
 
 .top-section h2 {
     color: #760000;
-    font-size: 28px;
-    margin: 0 0 20px 0;
+    font-size: 23px;
+    margin: 0 0 16px;
 }
 
 .top-section p {
-    font-size: 23px;
-    margin: 9px 0;
+    font-size: 18px;
+    margin: 7px 0;
 }
 
 .status-section {
@@ -189,42 +194,96 @@ header h1 {
     color: #ffffff;
     text-align: center;
     font-weight: 900;
-    font-size: 22px;
-    padding: 14px;
-    border-radius: 35px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    padding: 11px;
+    border-radius: 30px;
+    margin-bottom: 26px;
 }
 
 .specs-container {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: 36px;
+    gap: 32px;
 }
 
 .specs-left {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .spec-row {
     display: grid;
-    grid-template-columns: 310px 1fr;
+    grid-template-columns: 230px 1fr;
     border-bottom: 1px solid #dddddd;
-    padding: 20px 0;
+    padding: 16px 0;
 }
 
 .notes-box {
     border: 1px solid #999999;
-    min-height: 260px;
-    padding: 24px;
+    min-height: 220px;
+    padding: 20px;
 }
 
 .notes-box h3 {
     color: #760000;
-    margin: 0 0 20px 0;
-    font-size: 24px;
+    margin: 0 0 16px;
+    font-size: 20px;
 }
 
 .notes-box p {
-    font-size: 21px;
+    font-size: 18px;
     margin: 0;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .table-header,
+    .row-wrap {
+        grid-template-columns: 90px 1fr 1fr 60px 120px 110px;
+        padding: 0 10px;
+        column-gap: 6px;
+    }
+
+    .row-cells {
+        grid-template-columns: 90px 1fr 1fr 60px 120px;
+        font-size: 13px;
+    }
+
+    .table-header div {
+        font-size: 12px;
+        padding: 9px 5px;
+    }
+
+    .details-link {
+        font-size: 13px;
+    }
+
+    .status {
+        min-width: 90px;
+        padding: 6px 8px;
+    }
+
+    .modal-content {
+        width: 94vw;
+        height: 88vh;
+        padding: 40px 24px;
+    }
+
+    .top-section,
+    .specs-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .spec-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
 }
