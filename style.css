@@ -6,13 +6,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f5f8;
+    background: #ffffff;
     color: #111;
 }
 
 .container {
-    width: min(1180px, calc(100% - 48px));
-    margin: 32px auto;
+    width: 100%;
+    margin: 0;
     background: #ffffff;
     padding-bottom: 32px;
 }
@@ -33,10 +33,10 @@ header h1 {
 .table-header,
 .row-wrap {
     display: grid;
-    grid-template-columns: 130px 260px 300px 80px 180px 130px;
+    grid-template-columns: 130px 260px 300px 80px 180px 140px;
     column-gap: 12px;
     align-items: center;
-    padding: 0 22px;
+    padding: 0 24px;
 }
 
 .table-header {
@@ -51,10 +51,12 @@ header h1 {
     padding: 12px 10px;
     border-radius: 32px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .table-header div:last-child {
     background: transparent;
+    cursor: default;
 }
 
 .row-wrap {
@@ -112,11 +114,15 @@ header h1 {
 }
 
 .status.production {
-    background: #ead0d0;
+    background: #d9b3b3;
 }
 
 .status.ready {
     background: #cbdced;
+}
+
+.status.new {
+    background: #fff200;
 }
 
 .status.large {
@@ -127,7 +133,10 @@ header h1 {
     font-size: 20px;
 }
 
-/* Modal */
+.status.large.new {
+    background: #fff200;
+    color: #000000;
+}
 
 .modal {
     display: none;
@@ -146,8 +155,8 @@ header h1 {
 
 .modal-content {
     position: relative;
-    width: min(1050px, 92vw);
-    height: 84vh;
+    width: 92vw;
+    height: 86vh;
     background: #ffffff;
     border-radius: 8px;
     padding: 48px 52px;
@@ -232,58 +241,4 @@ header h1 {
 .notes-box p {
     font-size: 18px;
     margin: 0;
-}
-
-@media (max-width: 900px) {
-    .container {
-        width: 100%;
-        margin: 0;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    .table-header,
-    .row-wrap {
-        grid-template-columns: 90px 1fr 1fr 60px 120px 110px;
-        padding: 0 10px;
-        column-gap: 6px;
-    }
-
-    .row-cells {
-        grid-template-columns: 90px 1fr 1fr 60px 120px;
-        font-size: 13px;
-    }
-
-    .table-header div {
-        font-size: 12px;
-        padding: 9px 5px;
-    }
-
-    .details-link {
-        font-size: 13px;
-    }
-
-    .status {
-        min-width: 90px;
-        padding: 6px 8px;
-    }
-
-    .modal-content {
-        width: 94vw;
-        height: 88vh;
-        padding: 40px 24px;
-    }
-
-    .top-section,
-    .specs-container {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .spec-row {
-        grid-template-columns: 1fr;
-        gap: 6px;
-    }
 }
