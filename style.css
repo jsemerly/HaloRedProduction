@@ -5,53 +5,55 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #111;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background: #f4f5f8;
+    color: #111111;
 }
 
 .container {
-    width: 100%;
-    margin: 0;
+    width: min(1450px, calc(100% - 32px));
+    margin: 24px auto;
     background: #ffffff;
-    padding-bottom: 32px;
+    padding-bottom: 28px;
 }
 
 header {
     background: #760000;
     color: #ffffff;
     text-align: center;
-    padding: 22px 16px;
+    padding: 18px 16px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 34px;
-    font-weight: 900;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
 .table-header,
 .row-wrap {
     display: grid;
-    grid-template-columns: 130px 260px 300px 80px 180px 140px;
-    column-gap: 12px;
+    grid-template-columns: 130px 280px 360px 80px 160px 120px;
+    column-gap: 10px;
     align-items: center;
     padding: 0 24px;
 }
 
 .table-header {
-    margin: 28px 0 14px;
+    margin: 26px 0 12px;
 }
 
 .table-header div {
     background: #760000;
     color: #ffffff;
     text-align: center;
-    font-weight: 900;
-    padding: 12px 10px;
-    border-radius: 32px;
-    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 10px;
+    border-radius: 28px;
+    font-size: 15px;
     cursor: pointer;
+    letter-spacing: 0.2px;
 }
 
 .table-header div:last-child {
@@ -60,23 +62,27 @@ header h1 {
 }
 
 .row-wrap {
-    min-height: 58px;
-    margin-bottom: 12px;
+    min-height: 50px;
+    margin-bottom: 10px;
 }
 
 .row-cells {
     grid-column: 1 / 6;
     display: grid;
-    grid-template-columns: 130px 260px 300px 80px 180px;
+    grid-template-columns: 130px 280px 360px 80px 160px;
     align-items: center;
-    min-height: 58px;
-    font-size: 17px;
-    font-weight: 700;
+    min-height: 50px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .row-cells div {
     text-align: center;
     padding: 8px 10px;
+}
+
+.row-cells div:nth-child(2) {
+    font-weight: 600;
 }
 
 .production-row {
@@ -90,12 +96,12 @@ header h1 {
 .details-link {
     grid-column: 6 / 7;
     text-align: left;
-    font-size: 17px;
-    font-weight: 800;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .details-link a {
-    color: #777777;
+    color: #6f6f6f;
     text-decoration: none;
 }
 
@@ -105,38 +111,51 @@ header h1 {
 
 .status {
     display: inline-block;
-    min-width: 120px;
-    padding: 7px 14px;
-    border-radius: 28px;
+    min-width: 92px;
+    padding: 6px 12px;
+    border-radius: 24px;
     text-align: center;
-    font-weight: 900;
+    font-size: 14px;
+    font-weight: 700;
     color: #000000;
 }
 
 .status.production {
-    background: #d9b3b3;
+    background: #d8b3b3;
 }
 
 .status.ready {
-    background: #cbdced;
+    background: #c8d8ee;
 }
 
 .status.new {
-    background: #fff200;
+    background: #ffe600;
 }
 
 .status.large {
     background: #760000;
     color: #ffffff;
-    min-width: 190px;
-    padding: 16px 24px;
-    font-size: 20px;
+    min-width: 170px;
+    padding: 14px 22px;
+    font-size: 18px;
 }
 
 .status.large.new {
-    background: #fff200;
+    background: #ffe600;
     color: #000000;
 }
+
+.status.large.ready {
+    background: #c8d8ee;
+    color: #000000;
+}
+
+.status.large.production {
+    background: #760000;
+    color: #ffffff;
+}
+
+/* Modal */
 
 .modal {
     display: none;
@@ -144,7 +163,7 @@ header h1 {
     z-index: 1000;
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
-    padding: 36px;
+    padding: 34px;
 }
 
 .modal.open {
@@ -159,7 +178,7 @@ header h1 {
     height: 86vh;
     background: #ffffff;
     border-radius: 8px;
-    padding: 48px 52px;
+    padding: 44px 50px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
     overflow-y: auto;
 }
@@ -171,27 +190,30 @@ header h1 {
     border: none;
     background: transparent;
     color: #760000;
-    font-size: 34px;
+    font-size: 32px;
+    line-height: 1;
     cursor: pointer;
 }
 
 .top-section {
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr;
-    gap: 56px;
-    margin-top: 24px;
-    margin-bottom: 38px;
+    gap: 54px;
+    margin-top: 20px;
+    margin-bottom: 36px;
 }
 
 .top-section h2 {
     color: #760000;
-    font-size: 23px;
-    margin: 0 0 16px;
+    font-size: 21px;
+    margin: 0 0 14px;
+    font-weight: 700;
 }
 
 .top-section p {
-    font-size: 18px;
-    margin: 7px 0;
+    font-size: 17px;
+    margin: 6px 0;
+    font-weight: 400;
 }
 
 .status-section {
@@ -202,11 +224,11 @@ header h1 {
     background: #760000;
     color: #ffffff;
     text-align: center;
-    font-weight: 900;
-    font-size: 18px;
-    padding: 11px;
-    border-radius: 30px;
-    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 28px;
+    margin-bottom: 24px;
 }
 
 .specs-container {
@@ -216,29 +238,93 @@ header h1 {
 }
 
 .specs-left {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .spec-row {
     display: grid;
     grid-template-columns: 230px 1fr;
     border-bottom: 1px solid #dddddd;
-    padding: 16px 0;
+    padding: 14px 0;
+}
+
+.spec-row strong {
+    font-weight: 600;
 }
 
 .notes-box {
     border: 1px solid #999999;
-    min-height: 220px;
-    padding: 20px;
+    min-height: 210px;
+    padding: 18px;
 }
 
 .notes-box h3 {
     color: #760000;
-    margin: 0 0 16px;
-    font-size: 20px;
+    margin: 0 0 14px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .notes-box p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .table-header,
+    .row-wrap {
+        grid-template-columns: 80px 1fr 1fr 52px 95px 90px;
+        column-gap: 6px;
+        padding: 0 8px;
+    }
+
+    .row-cells {
+        grid-template-columns: 80px 1fr 1fr 52px 95px;
+        font-size: 12px;
+    }
+
+    .table-header div {
+        font-size: 11px;
+        padding: 8px 5px;
+    }
+
+    .details-link {
+        font-size: 12px;
+    }
+
+    .status {
+        min-width: 70px;
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        width: 96vw;
+        height: 92vh;
+        padding: 38px 22px;
+    }
+
+    .top-section,
+    .specs-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .spec-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
 }
