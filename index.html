@@ -25,39 +25,9 @@
     </div>
 
     <div id="productionTable">
-
-        <div class="row-wrap">
-            <div class="row-cells production-row">
-                <div>6/23</div>
-                <div>Sally Smith</div>
-                <div>HaloRed 1 person O2</div>
-                <div>01</div>
-                <div>
-                    <span class="status production">PRODUCTION</span>
-                </div>
-            </div>
-
-            <div class="details-link">
-                <a href="#" onclick="openModal()">See Details &gt;</a>
-            </div>
+        <div style="padding:20px;">
+            Loading production data...
         </div>
-
-        <div class="row-wrap">
-            <div class="row-cells inventory-row">
-                <div>6/14</div>
-                <div>UNASSIGNED - For Inventory</div>
-                <div>HaloRed 1 person O2</div>
-                <div>02</div>
-                <div>
-                    <span class="status ready">READY</span>
-                </div>
-            </div>
-
-            <div class="details-link">
-                <a href="#" onclick="openModal()">See Details &gt;</a>
-            </div>
-        </div>
-
     </div>
 
 </div>
@@ -72,19 +42,19 @@
 
             <div class="order-details">
                 <h2>ORDER DETAILS</h2>
-                <p><strong>Sally Smith</strong></p>
-                <p>HaloRed 1 person O2</p>
-                <p>QTY 01</p>
+                <p><strong id="modalOrderId"></strong></p>
+                <p id="modalSku"></p>
+                <p id="modalQty"></p>
             </div>
 
             <div class="ship-to">
                 <h2>SHIP TO</h2>
-                <p>TBD</p>
+                <p id="modalShipTo">TBD</p>
             </div>
 
             <div class="status-section">
                 <h2>STATUS</h2>
-                <span class="status production large">PRODUCTION</span>
+                <span id="modalStatus" class="status production large"></span>
             </div>
 
         </div>
@@ -99,29 +69,29 @@
 
                 <div class="spec-row">
                     <strong>Redlight Configuration:</strong>
-                    <span>1 Small (Standard), 3 Large (Max)</span>
+                    <span id="modalRedlight"></span>
                 </div>
 
                 <div class="spec-row">
                     <strong>Seat Type:</strong>
-                    <span>Chair</span>
+                    <span id="modalSeat"></span>
                 </div>
 
                 <div class="spec-row">
                     <strong>Plug Type:</strong>
-                    <span>UK</span>
+                    <span id="modalPlug"></span>
                 </div>
 
                 <div class="spec-row">
                     <strong>Oxygen Y/N:</strong>
-                    <span>Yes</span>
+                    <span id="modalOxygen"></span>
                 </div>
 
             </div>
 
             <div class="notes-box">
                 <h3>OTHER IMPORTANT NOTES</h3>
-                <p>None</p>
+                <p id="modalNotes"></p>
             </div>
 
         </div>
